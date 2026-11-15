@@ -1,0 +1,32 @@
+{
+  "alpha": 0.05,
+  "benchmarkId": "monopoly-equal-n20-2026-11-14",
+  "methods": [
+    "monopoly",
+    "ratioWelch",
+    "deseq2",
+    "edgeR"
+  ],
+  "minimumMean": 20,
+  "scenarios": [
+    {
+      "dispersionCorrelation": 1.0,
+      "dispersionLogSd": 0.5,
+      "fractionDispersions": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "genes": 5000,
+      "participantsPerCondition": 20,
+      "redistributedGenes": 500,
+      "redistributionLog2Effect": 1,
+      "redistributionPositiveFraction": 0.5,
+      "replicates": 200,
+      "scenarioId": "equalEffect1N20",
+      "seedStart": 43000000,
+      "transcriptionGenes": 500,
+      "transcriptionLog2Effect": 1
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "alpha": 0.05,
+  "benchmarkId": "monopoly-fracfixr-2026-09",
+  "methods": [
+    "monopoly",
+    "fracfixr"
+  ],
+  "minimumMean": 20,
+  "scenarios": [
+    {
+      "baselineMean": 500,
+      "dispersionCorrelation": 1.0,
+      "dispersionLogSd": 0.0,
+      "fractionDispersions": [0.001, 0.001, 0.001],
+      "genes": 1000,
+      "libraryLogSd": 0.1,
+      "participantsPerCondition": 3,
+      "redistributedGenes": 0,
+      "replicates": 200,
+      "scenarioId": "lowDispersionNullN3",
+      "seedStart": 43000000,
+      "transcriptionGenes": 0
+    },
+    {
+      "baselineMean": 500,
+      "dispersionCorrelation": 1.0,
+      "dispersionLogSd": 0.0,
+      "fractionDispersions": [0.001, 0.001, 0.001],
+      "genes": 1000,
+      "libraryLogSd": 0.1,
+      "participantsPerCondition": 3,
+      "redistributedGenes": 200,
+      "redistributionLog2Effect": 2,
+      "redistributionPositiveFraction": 0.5,
+      "replicates": 100,
+      "scenarioId": "lowDispersionEffect2N3",
+      "seedStart": 43050000,
+      "transcriptionGenes": 200,
+      "transcriptionLog2Effect": 1
+    },
+    {
+      "dispersionCorrelation": 1.0,
+      "dispersionLogSd": 0.5,
+      "fractionDispersions": [0.15, 0.15, 0.15],
+      "genes": 1000,
+      "participantsPerCondition": 3,
+      "redistributedGenes": 0,
+      "replicates": 200,
+      "scenarioId": "equalNullN3",
+      "seedStart": 43100000,
+      "transcriptionGenes": 0
+    },
+    {
+      "dispersionCorrelation": 0.7,
+      "dispersionLogSd": 0.5,
+      "fractionDispersions": [0.05, 0.15, 0.5],
+      "genes": 1000,
+      "participantsPerCondition": 3,
+      "redistributedGenes": 0,
+      "replicates": 200,
+      "scenarioId": "unequalNullN3",
+      "seedStart": 43200000,
+      "transcriptionGenes": 0
+    },
+    {
+      "dispersionCorrelation": 1.0,
+      "dispersionLogSd": 0.5,
+      "fractionDispersions": [0.15, 0.15, 0.15],
+      "genes": 1000,
+      "participantsPerCondition": 3,
+      "redistributedGenes": 200,
+      "redistributionLog2Effect": 2,
+      "redistributionPositiveFraction": 0.5,
+      "replicates": 100,
+      "scenarioId": "equalEffect2N3",
+      "seedStart": 43300000,
+      "transcriptionGenes": 200,
+      "transcriptionLog2Effect": 1
+    },
+    {
+      "dispersionCorrelation": 0.7,
+      "dispersionLogSd": 0.5,
+      "fractionDispersions": [0.05, 0.15, 0.5],
+      "genes": 1000,
+      "participantsPerCondition": 3,
+      "redistributedGenes": 200,
+      "redistributionLog2Effect": 2,
+      "redistributionPositiveFraction": 0.5,
+      "replicates": 100,
+      "scenarioId": "unequalEffect2N3",
+      "seedStart": 43400000,
+      "transcriptionGenes": 200,
+      "transcriptionLog2Effect": 1
+    }
+  ]
+}

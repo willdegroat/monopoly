@@ -1,0 +1,16 @@
+.coverage
+.development/
+.ipython/
+.jupyter*/
+.mplconfig/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+build/
+benchmark-results/
+dist/
+htmlcov/
+*.egg-info/
+*.py[cod]

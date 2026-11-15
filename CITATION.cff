@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: 'If you use Monopoly, please cite the software and associated manuscript.'
+title: 'Monopoly: paired differential analysis of polysome profiling RNA-seq data'
+type: software
+authors:
+  - family-names: 'DeGroat'
+    given-names: 'William'
+  - family-names: 'Kreimer'
+    given-names: 'Anat'
+version: 0.1.0
+license: MIT
+repository-code: 'https://github.com/WillDeGroat/monopoly'

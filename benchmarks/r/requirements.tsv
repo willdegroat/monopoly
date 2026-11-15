@@ -1,0 +1,6 @@
+package	version	source
+R	4.6.1	R Project
+FracFixR	1.1.0	CRAN
+DESeq2	1.52.0	Bioconductor 3.23
+edgeR	4.10.5	Bioconductor 3.23
+

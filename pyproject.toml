@@ -1,0 +1,101 @@
+[build-system]
+requires = ['hatchling>=1.27,<1.32']
+build-backend = 'hatchling.build'
+
+[project]
+name = 'monopoly-polysome'
+version = '0.1.0'
+description = 'Paired differential analysis of polysome profiling RNA-seq data.'
+readme = 'README.md'
+requires-python = '>=3.11'
+license = 'MIT'
+authors = [
+    {name = 'William DeGroat'},
+    {name = 'Anat Kreimer'},
+]
+keywords = [
+    'bioinformatics',
+    'polysome profiling',
+    'RNA-seq',
+    'translation',
+]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+]
+dependencies = [
+    'formulaic>=1.0,<2',
+    'numpy>=1.26,<3',
+    'pandas>=2.2,<4',
+    'pydeseq2>=0.5.4,<0.6',
+]
+
+[project.urls]
+Repository = 'https://github.com/WillDeGroat/monopoly'
+Documentation = 'https://github.com/WillDeGroat/monopoly#readme'
+Changelog = 'https://github.com/WillDeGroat/monopoly/blob/main/CHANGELOG.md'
+Issues = 'https://github.com/WillDeGroat/monopoly/issues'
+
+[project.optional-dependencies]
+dev = [
+    'build>=1,<2',
+    'pytest>=8,<10',
+    'pytest-cov>=5,<8',
+    'ruff>=0.9,<1',
+    'scipy>=1.12,<2',
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ['src/monopoly']
+
+[tool.hatch.build.targets.sdist]
+include = [
+    '/src',
+    '/tests',
+    '/benchmarks',
+    '/docs',
+    '/CHANGELOG.md',
+    '/CITATION.cff',
+    '/CONTRIBUTING.md',
+    '/LICENSE',
+    '/README.md',
+    '/STYLE.md',
+    '/pyproject.toml',
+]
+
+[tool.ruff]
+exclude = ['.development']
+line-length = 88
+target-version = 'py311'
+
+[tool.ruff.lint]
+select = ['B', 'C90', 'E', 'F', 'I', 'Q', 'UP']
+ignore = ['E251']
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'
+multiline-quotes = 'double'
+docstring-quotes = 'double'
+
+[tool.pytest.ini_options]
+addopts = ['--strict-config', '--strict-markers']
+pythonpath = ['src']
+testpaths = ['tests']
+markers = [
+    'r_integration: requires configured R benchmark dependencies',
+]
+
+[tool.coverage.run]
+branch = true
+source = ['monopoly']
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true
+skip_covered = true

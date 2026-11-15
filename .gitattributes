@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Benchmark manifests fingerprint source bytes from the frozen study run.
+benchmarks/** -text
+*.gz binary
